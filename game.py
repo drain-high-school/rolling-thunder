@@ -26,7 +26,7 @@ def roll(rolls_left, current_hand):
 
     while rolls_left != 0:
         dice_to_reroll = [False, False, False, False, False]
-        user_input = input("Which dice would you like to reroll? Press Enter to reroll none, else separate with spaces.")
+        user_input = input("Which dice would you like to reroll? Press Enter to reroll none, else separate with spaces: ")
         if user_input == "":
             rolls_left = 0
         else:
@@ -34,6 +34,6 @@ def roll(rolls_left, current_hand):
                 if i != " ":
                     dice_to_reroll[int(i)-1] = True
             rolls_left -= 1
-        roll_dice(current_hand, dice_to_reroll)
+        print(roll_dice(current_hand, dice_to_reroll))
 
 roll(3, current_hand)
